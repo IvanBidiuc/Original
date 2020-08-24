@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import TodoList from './Todo/TodoList'
 import Context from './context'
 import Loader from './Loader'
-import Modal from './Modal/Modal'
+
 
 
 const AddTodo = React.lazy(
@@ -10,7 +10,7 @@ const AddTodo = React.lazy(
     new Promise(resolve => {
       setTimeout(() => {
         resolve(import('./Todo/AddTodo'))
-      }, 3000)
+      }, 5000)
     })
 )
 
@@ -60,7 +60,7 @@ function App() {
     <Context.Provider value={{ removeTodo }}>
       <div className='wrapper'>
         <h1>Todo-App</h1>
-        <Modal />
+        
 
         <React.Suspense fallback={<Loader />}>
           <AddTodo onCreate={addTodo} />
@@ -70,7 +70,7 @@ function App() {
         {todos.length ? (
           <TodoList todos={todos} onToggle={toggleTodo} />
         ) : loading ? null : (
-          <p>No todos!</p>
+          <p>None todos!</p>
         )}
       </div>
     </Context.Provider>
