@@ -40,7 +40,7 @@ function TodoItem({ todo, index, onChange }) {
       </span>
 
       <button className='rm' onClick={removeTodo.bind(null, todo.id)}>
-        &times;
+        Delete
       </button>
     </li>
   )

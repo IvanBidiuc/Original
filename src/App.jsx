@@ -10,7 +10,7 @@ const AddTodo = React.lazy(
     new Promise(resolve => {
       setTimeout(() => {
         resolve(import('./Todo/AddTodo'))
-      }, 5000)
+      }, 3000)
     })
 )
 
@@ -25,7 +25,7 @@ function App() {
         setTimeout(() => {
           setTodos(todos)
           setLoading(false)
-        }, 2000)
+        },0)
       })
   }, [])
 
@@ -59,14 +59,14 @@ function App() {
   return (
     <Context.Provider value={{ removeTodo }}>
       <div className='wrapper'>
-        <h1>Todo-App</h1>
+        <h1>Todo-App</h1> 
         
 
         <React.Suspense fallback={<Loader />}>
           <AddTodo onCreate={addTodo} />
         </React.Suspense>
 
-        {loading && <Loader />}
+        
         {todos.length ? (
           <TodoList todos={todos} onToggle={toggleTodo} />
         ) : loading ? null : (
