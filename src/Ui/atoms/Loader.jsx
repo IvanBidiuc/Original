@@ -1,4 +1,5 @@
 import React from 'react'
+import './Loader.css';
 
 export default () => (
   <div style={{ display: 'flex', justifyContent: 'center', margin: '.5rem' }}>

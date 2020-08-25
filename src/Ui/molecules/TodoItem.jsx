@@ -1,19 +1,19 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import Context from '../context'
+import Context from '../../context'
 
 const styles = {
   li: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '.100rem 1rem',
+    padding: '.50rem 1rem',
     border: '3px solid black',
-    borderRadius: '15px',
+    borderRadius: '30px',
     marginBottom: '.9rem'
   },
   input: {
-    marginRight: '4rem'
+    marginRight: '2rem'
   }
 }
 

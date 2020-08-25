@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import TodoList from './Todo/TodoList'
-import Context from './context'
-import Loader from './Loader'
+import TodoList from '../molecules/TodoList'
+import Context from '../../context'
+import Loader from '../atoms/Loader'
 
 
 
@@ -9,7 +9,7 @@ const AddTodo = React.lazy(
   () =>
     new Promise(resolve => {
       setTimeout(() => {
-        resolve(import('./Todo/AddTodo'))
+        resolve(import('../molecules/AddTodo'))
       }, 3000)
     })
 )
